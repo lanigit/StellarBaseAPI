@@ -1,12 +1,12 @@
 openapi: 3.0.0
 info:
   title: User API
-  version: 1.0.0
+  version: 1.0.1
   description: API to create and manage user data. It allows users to register, login, and get/update/delete their data.
 paths:
   /v1/users/register:
     post:
-      summary: Register a new user
+      summary: Create and register a new user
       requestBody:
         required: true
         content:
@@ -21,7 +21,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserWithToken'
         '500':
-          description: Error occurred
+          description: An internal server error occurred
           content:
             application/json:
               schema:
