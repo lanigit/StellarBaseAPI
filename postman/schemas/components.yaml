@@ -1,0 +1,40 @@
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+  schemas:
+    UserCredentials:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+    UserWithToken:
+      allOf:
+        - $ref: '#/components/schemas/User'
+        - type: object
+          properties:
+            token:
+              type: string
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    SuccessMessage:
+      type: object
+      properties:
+        message:
+          type: string
+security:
+  - ApiKeyAuth: []          
