@@ -159,4 +159,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
-  $ref: './components.yaml'
+  $ref: '/components.yaml'
+security:
+  $ref: '/security.yaml'
