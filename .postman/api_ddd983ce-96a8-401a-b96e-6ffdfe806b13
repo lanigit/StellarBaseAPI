@@ -16,6 +16,7 @@ rootDirectory = postman/collections
 rootDirectory = postman/schemas
 files[] = {"path":"components.yaml","metaData":{}}
 files[] = {"path":"index.yaml","metaData":{}}
+files[] = {"path":"security.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3

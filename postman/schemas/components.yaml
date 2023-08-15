@@ -36,5 +36,4 @@ components:
       properties:
         message:
           type: string
-security:
-  - ApiKeyAuth: []          
+
