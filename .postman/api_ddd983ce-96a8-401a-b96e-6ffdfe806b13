@@ -17,7 +17,7 @@ files[] = {"id":"28582153-d46acb51-30f4-4a41-b92d-c9490acd1e31","path":"User Man
 rootDirectory = postman/schemas
 files[] = {"path":"components.yaml","metaData":{}}
 files[] = {"path":"index.yaml","metaData":{}}
-files[] = {"path":"security.yaml","metaData":{}}
+files[] = {"path":"securitySchemes.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3
