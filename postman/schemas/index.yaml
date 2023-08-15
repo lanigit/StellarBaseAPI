@@ -158,4 +158,5 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorMessage'
-
+components:
+  $ref: './components.yaml'
