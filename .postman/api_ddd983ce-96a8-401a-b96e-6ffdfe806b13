@@ -9,7 +9,7 @@ id = ddd983ce-96a8-401a-b96e-6ffdfe806b13
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"28582153-d46acb51-30f4-4a41-b92d-c9490acd1e31","path":"User Management.json","metaData":{}}
+files[] = {"id":"28582153-8fadbe5b-91cb-4218-96e5-70cb4d436078","path":"User Management.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Paths\",\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"alwaysInheritAuthentication\":false,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\"}"}}
 
 [config.relations.collections.metaData]
 
@@ -18,6 +18,7 @@ rootDirectory = postman/schemas
 files[] = {"path":"components.yaml","metaData":{}}
 files[] = {"path":"index.yaml","metaData":{}}
 files[] = {"path":"securitySchemes.yaml","metaData":{}}
+files[] = {"path":"servers.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3

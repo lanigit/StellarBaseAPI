@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "d46acb51-30f4-4a41-b92d-c9490acd1e31",
+		"_postman_id": "8fadbe5b-91cb-4218-96e5-70cb4d436078",
 		"name": "User Management",
 		"description": "API to create and manage user data. It allows users to register, login, and get/update/delete their data.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "28582153-d46acb51-30f4-4a41-b92d-c9490acd1e31"
+		"_uid": "28582153-8fadbe5b-91cb-4218-96e5-70cb4d436078"
 	},
 	"item": [
 		{
@@ -18,7 +18,7 @@
 							"item": [
 								{
 									"name": "Retrieve a user",
-									"id": "4924c671-fbab-435a-86dd-34988bcd505c",
+									"id": "a26c878a-813b-4bfc-aa58-6248be29be33",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -50,7 +50,7 @@
 									},
 									"response": [
 										{
-											"id": "8e85c032-a9a8-4a59-8263-b9df319c2a7d",
+											"id": "2d459dc9-f0ff-4243-8df8-f0dda8542101",
 											"name": "Successful operation",
 											"originalRequest": {
 												"method": "GET",
@@ -90,7 +90,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/User not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "1f63476e-53d2-4c6b-9810-faca188952a9",
+											"id": "e395312d-68f7-4732-b5d4-a4baae432372",
 											"name": "User not found",
 											"originalRequest": {
 												"method": "GET",
@@ -130,7 +130,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "8a3288ac-cd44-432d-b2b1-9e2c1bae4c35",
+											"id": "22c822ee-c4d9-4f7b-8176-e1d0bd2ab61a",
 											"name": "Error occurred",
 											"originalRequest": {
 												"method": "GET",
@@ -173,7 +173,7 @@
 								},
 								{
 									"name": "Update a user",
-									"id": "e4241e4d-1795-4b60-aa61-3c1e3b8a45c2",
+									"id": "b7c30e85-f96f-4e0a-8348-6c25409110e1",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -219,7 +219,7 @@
 									},
 									"response": [
 										{
-											"id": "530a387b-4918-4894-9e5f-464fd3ee5d1d",
+											"id": "ea7b87af-0baf-4fae-8ef3-81c70311c4e6",
 											"name": "User updated successfully",
 											"originalRequest": {
 												"method": "PUT",
@@ -273,7 +273,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/SuccessMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "f18340b8-fb73-4080-8b70-fb905df91ebf",
+											"id": "63c265c8-322b-461a-b780-5d85a2637361",
 											"name": "Error occurred",
 											"originalRequest": {
 												"method": "PUT",
@@ -325,12 +325,66 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "4932c477-32e5-446d-8281-e10649726e03",
+											"name": "Incorrect permissions",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": null
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
 										}
 									]
 								},
 								{
 									"name": "Delete a user",
-									"id": "e2d4df2a-9eb2-4a29-9374-61757b253782",
+									"id": "63d9484c-b063-4b00-94ff-c14562f217d7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -362,7 +416,7 @@
 									},
 									"response": [
 										{
-											"id": "91f3a2d1-a19e-4258-83aa-f7df1786a080",
+											"id": "0b89103f-affa-4b67-aed8-14a4705d87f0",
 											"name": "User deleted successfully",
 											"originalRequest": {
 												"method": "DELETE",
@@ -402,7 +456,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/SuccessMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "5dd1b39e-06c7-4bba-80af-e5e9243a0a10",
+											"id": "fad903ca-d38b-40f1-8811-0c4e93b3dc97",
 											"name": "Error occurred",
 											"originalRequest": {
 												"method": "DELETE",
@@ -444,14 +498,14 @@
 									]
 								}
 							],
-							"id": "fc96ff76-7ae9-416b-bf83-53c802170bfc"
+							"id": "55f5b66e-0d72-497b-b2e0-aca98c950729"
 						},
 						{
 							"name": "register",
 							"item": [
 								{
 									"name": "Create and register a new user",
-									"id": "e8b5dee6-7b9b-4192-b954-3f8d1fa34f63",
+									"id": "1a9d449b-71d0-41d0-9f30-486a611bc82f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -491,7 +545,7 @@
 									},
 									"response": [
 										{
-											"id": "6bbdcffe-eff8-42d8-8a18-b65036e10a9f",
+											"id": "b595f592-ef55-48ca-9e19-12bde8302ab5",
 											"name": "User registered successfully",
 											"originalRequest": {
 												"method": "POST",
@@ -540,7 +594,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/UserWithToken not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "a0caacbb-3d0a-4949-980a-7857e90c64a4",
+											"id": "2f971914-3d5d-4e23-a2c2-456f48998eb4",
 											"name": "Invalid credentials",
 											"originalRequest": {
 												"method": "POST",
@@ -589,7 +643,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "2ab24918-34b8-4947-971c-53a5bb313701",
+											"id": "c2e51b06-772a-4dc3-abe6-7175485910df",
 											"name": "An internal server error occurred",
 											"originalRequest": {
 												"method": "POST",
@@ -640,14 +694,14 @@
 									]
 								}
 							],
-							"id": "05a4d205-110c-4dc8-a0bb-4529465aa5b6"
+							"id": "8bfd7bd5-bcfb-4a4e-b17e-1c5cbb871ee7"
 						},
 						{
 							"name": "logout",
 							"item": [
 								{
 									"name": "Log out a user",
-									"id": "e0a15333-b99d-41dc-9e9f-18bfb4ba3d33",
+									"id": "e1eb653c-1085-48a9-8c93-36aca3a02378",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -673,7 +727,7 @@
 									},
 									"response": [
 										{
-											"id": "c863d1a8-72d3-4f7a-bb11-be4f51064df7",
+											"id": "6c967d23-99cb-4623-a234-cb866ad21a7c",
 											"name": "User logged out successfully",
 											"originalRequest": {
 												"method": "POST",
@@ -708,7 +762,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/SuccessMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "4039c3e1-6eb8-4b52-811b-db7243125443",
+											"id": "3cb2878e-9b40-4230-984a-749eddec6357",
 											"name": "Unauthorized",
 											"originalRequest": {
 												"method": "POST",
@@ -743,7 +797,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "94ac428e-2ea7-4d96-b600-571315143922",
+											"id": "79bf597a-2b48-4c04-bcd2-900e0bde895f",
 											"name": "Error occurred",
 											"originalRequest": {
 												"method": "POST",
@@ -780,14 +834,14 @@
 									]
 								}
 							],
-							"id": "d3e3e4d7-6183-459e-bd9a-721fabf97929"
+							"id": "fbb81dbb-4912-4b76-aa90-efe78b80083e"
 						},
 						{
 							"name": "login",
 							"item": [
 								{
 									"name": "Log in a user",
-									"id": "ff0ff281-6050-4a2c-b4f9-4d72da0ca9cf",
+									"id": "9e43efa5-86b5-43d0-b2a3-ab2ba9240b26",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -827,7 +881,7 @@
 									},
 									"response": [
 										{
-											"id": "3dadeafa-13e6-433d-a1d4-469d6b0fbc0a",
+											"id": "f385a695-dafe-4f82-8979-cb14ae588124",
 											"name": "User logged in successfully",
 											"originalRequest": {
 												"method": "POST",
@@ -876,7 +930,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/UserWithToken not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "2e90acb0-9c26-4c07-bf37-ec039d516eeb",
+											"id": "f115fe7f-3a0c-41d3-af35-3b6829476ba2",
 											"name": "Unauthorized",
 											"originalRequest": {
 												"method": "POST",
@@ -925,7 +979,7 @@
 											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
 										},
 										{
-											"id": "ae8632fc-a5d3-49c7-96d3-3cfe0b649236",
+											"id": "e9c6d42c-d8f9-4755-b9b3-adde6e26656d",
 											"name": "Error occurred",
 											"originalRequest": {
 												"method": "POST",
@@ -976,20 +1030,21 @@
 									]
 								}
 							],
-							"id": "5b1c2d51-fae9-478e-99d1-d3869949db53"
+							"id": "6f85b865-3079-4a20-a5c1-03581942566d"
 						}
 					],
-					"id": "baa5949b-d88b-4e8c-a58d-19374f8efe71"
+					"id": "b4c46293-c89e-4047-8bfb-1077f3de1315"
 				}
 			],
-			"id": "ef214f3c-3f2a-4f5b-bea1-d92d8c88cfa4"
+			"id": "7154b619-4cee-45c6-9d90-b1134ff5eadd"
 		}
 	],
 	"variable": [
 		{
-			"id": "8e4a76d1-13f2-4cf2-aa2b-f965862e386a",
+			"id": "e320472c-97f4-4dc8-b210-8536c83d17cf",
 			"key": "baseUrl",
-			"value": "/"
+			"value": "https://api.example.com/v1",
+			"type": "any"
 		}
 	]
 }
