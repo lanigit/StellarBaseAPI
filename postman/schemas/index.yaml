@@ -11,6 +11,8 @@ servers:
 paths:
   /v1/users/register:
     post:
+      security:
+      - ApiKeyAuth: []
       summary: Create and register a new user
       requestBody:
         required: true
@@ -39,6 +41,8 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
   /v1/users/login:
     post:
+      security:
+      - ApiKeyAuth: []
       summary: Log in a user
       requestBody:
         required: true
@@ -67,6 +71,8 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
   /v1/users/logout:
     post:
+      security:
+        - ApiKeyAuth: []
       summary: Log out a user
       responses:
         '200':
@@ -89,6 +95,8 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
   /v1/users/{id}:
     get:
+      security:
+        - ApiKeyAuth: []
       summary: Retrieve a user
       parameters:
         - in: path
@@ -116,6 +124,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorMessage'
     put:
+      security:
+      - ApiKeyAuth: []
       summary: Update a user
       parameters:
         - in: path
@@ -143,6 +153,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorMessage'
     delete:
+      security:
+      - ApiKeyAuth: []
       summary: Delete a user
       parameters:
         - in: path
