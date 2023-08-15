@@ -1,9 +1,4 @@
 components:
-  # securitySchemes:
-  #   ApiKeyAuth:
-  #     type: apiKey
-  #     in: header
-  #     name: X-API-Key
   schemas:
     UserCredentials:
       type: object
