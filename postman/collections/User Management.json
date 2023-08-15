@@ -1,0 +1,995 @@
+{
+	"info": {
+		"_postman_id": "d46acb51-30f4-4a41-b92d-c9490acd1e31",
+		"name": "User Management",
+		"description": "API to create and manage user data. It allows users to register, login, and get/update/delete their data.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "28582153-d46acb51-30f4-4a41-b92d-c9490acd1e31"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Retrieve a user",
+									"id": "4924c671-fbab-435a-86dd-34988bcd505c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "8e85c032-a9a8-4a59-8263-b9df319c2a7d",
+											"name": "Successful operation",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/User not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "1f63476e-53d2-4c6b-9810-faca188952a9",
+											"name": "User not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "8a3288ac-cd44-432d-b2b1-9e2c1bae4c35",
+											"name": "Error occurred",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update a user",
+									"id": "e4241e4d-1795-4b60-aa61-3c1e3b8a45c2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "530a387b-4918-4894-9e5f-464fd3ee5d1d",
+											"name": "User updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/SuccessMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "f18340b8-fb73-4080-8b70-fb905df91ebf",
+											"name": "Error occurred",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete a user",
+									"id": "e2d4df2a-9eb2-4a29-9374-61757b253782",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "91f3a2d1-a19e-4258-83aa-f7df1786a080",
+											"name": "User deleted successfully",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/SuccessMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "5dd1b39e-06c7-4bba-80af-e5e9243a0a10",
+											"name": "Error occurred",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										}
+									]
+								}
+							],
+							"id": "fc96ff76-7ae9-416b-bf83-53c802170bfc"
+						},
+						{
+							"name": "register",
+							"item": [
+								{
+									"name": "Create and register a new user",
+									"id": "e8b5dee6-7b9b-4192-b954-3f8d1fa34f63",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"register"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "6bbdcffe-eff8-42d8-8a18-b65036e10a9f",
+											"name": "User registered successfully",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"register"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/UserWithToken not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "a0caacbb-3d0a-4949-980a-7857e90c64a4",
+											"name": "Invalid credentials",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"register"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "2ab24918-34b8-4947-971c-53a5bb313701",
+											"name": "An internal server error occurred",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"register"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										}
+									]
+								}
+							],
+							"id": "05a4d205-110c-4dc8-a0bb-4529465aa5b6"
+						},
+						{
+							"name": "logout",
+							"item": [
+								{
+									"name": "Log out a user",
+									"id": "e0a15333-b99d-41dc-9e9f-18bfb4ba3d33",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/logout",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"logout"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "c863d1a8-72d3-4f7a-bb11-be4f51064df7",
+											"name": "User logged out successfully",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/logout",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/SuccessMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "4039c3e1-6eb8-4b52-811b-db7243125443",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/logout",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "94ac428e-2ea7-4d96-b600-571315143922",
+											"name": "Error occurred",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/logout",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										}
+									]
+								}
+							],
+							"id": "d3e3e4d7-6183-459e-bd9a-721fabf97929"
+						},
+						{
+							"name": "login",
+							"item": [
+								{
+									"name": "Log in a user",
+									"id": "ff0ff281-6050-4a2c-b4f9-4d72da0ca9cf",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/users/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"login"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "3dadeafa-13e6-433d-a1d4-469d6b0fbc0a",
+											"name": "User logged in successfully",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/UserWithToken not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "2e90acb0-9c26-4c07-bf37-ec039d516eeb",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										},
+										{
+											"id": "ae8632fc-a5d3-49c7-96d3-3cfe0b649236",
+											"name": "Error occurred",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"value\": \"reference #/components/schemas/UserCredentials not found in the OpenAPI spec\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/users/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"value\": \"reference #/components/schemas/ErrorMessage not found in the OpenAPI spec\"\n}"
+										}
+									]
+								}
+							],
+							"id": "5b1c2d51-fae9-478e-99d1-d3869949db53"
+						}
+					],
+					"id": "baa5949b-d88b-4e8c-a58d-19374f8efe71"
+				}
+			],
+			"id": "ef214f3c-3f2a-4f5b-bea1-d92d8c88cfa4"
+		}
+	],
+	"variable": [
+		{
+			"id": "8e4a76d1-13f2-4cf2-aa2b-f965862e386a",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
